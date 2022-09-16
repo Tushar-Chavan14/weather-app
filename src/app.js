@@ -5,7 +5,7 @@ import geocode from "./utils/geocode.cjs";
 import wheather from "./utils/wheather.cjs";
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const publicPath = new URL("../public/", import.meta.url).pathname;
 const viewsPath = new URL("../templates/views/", import.meta.url).pathname;

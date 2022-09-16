@@ -13,7 +13,7 @@ getweather.addEventListener("submit", (e) => {
 
   const loaction = input.value;
 
-  fetch(`http://localhost:3000/weather?address=${loaction}`).then((res) => {
+  fetch(`/weather?address=${loaction}`).then((res) => {
     res.json().then((data) => {
       if (data.error) {
         msg1.textContent= ''
