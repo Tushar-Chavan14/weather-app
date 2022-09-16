@@ -30,7 +30,7 @@ app.get("/", (req, res) => {
 app.get("/help", (req, res) => {
   res.render("help", {
     title: "Help page",
-    helptxt: "Just type out the location and hit the search button and you'll have you forecast displayed.",
+    helptxt: "Just type out the location and hit the search button and you'll find your forecast displayed.",
     name: "tushar",
   });
 });
