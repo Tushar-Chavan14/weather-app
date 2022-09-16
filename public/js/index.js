@@ -19,6 +19,7 @@ getweather.addEventListener("submit", (e) => {
         msg1.textContent= ''
         error.textContent = data.error;
       } else {
+        error.textContent = '';
         msg1.textContent = ` ${data.city} ${data.state}`;
         msg2.textContent = `${data.forecast}`;
       }
