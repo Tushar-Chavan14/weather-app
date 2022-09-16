@@ -24,6 +24,7 @@ app.get("/", (req, res) => {
   res.render("index", {
     title: "wheather app",
     name: "tushar",
+    heading:"Type in your city name and wait for forecast results"
   });
 });
 
