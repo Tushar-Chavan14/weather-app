@@ -16,8 +16,8 @@ const geocode = (address, callback) => {
     } else {
       const [{ name, state, lat, lon }] = res.body;
       callback(undefined, {
-        city: name,
-        state: state,
+        name,
+        state,
         lat: lat,
         lon: lon,
       });

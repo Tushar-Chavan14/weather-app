@@ -17,15 +17,22 @@ const wheather = (lat, lon, callback) => {
     } else if (res.body.error) {
       callback("unable to find the loaction", undefined);
     } else {
-      const { weather_descriptions, temperature, feelslike } = res.body.current;
-      callback(
-        undefined,
-        weather_descriptions[0] +
-          ".it is currently " +
-          temperature +
-          " and feels like " +
-          feelslike
-      );
+      const {
+        temperature,
+        feelslike,
+        weather_descriptions,
+        weather_icons,
+        wind_speed,
+        wind_dir,
+      } = res.body.current;
+      callback(undefined, {
+        desc: weather_descriptions[0],
+        temperature,
+        feelslike,
+        icon: weather_icons[0],
+        wind_speed,
+        wind_dir,
+      });
     }
   });
 };
